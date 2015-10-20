@@ -1,32 +1,12 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
+// =UserScript
+// @name         NTx
+// @description  Agar Enhanced
+// @version      1.0
+// @author       Dacha
+// @match        http://agar.io/*
+// @match        https://agar.io/*
+// @run-at       document-start
+// @grant        GM_xmlhttpRequest
+// ==/UserScript==
+ 
+window.stop(),document.documentElement.innerHTML=null,GM_xmlhttpRequest({method:"GET",url:"http://agar.secureobscure.com/agarplus/",onload:function(e){document.open(),document.write(e.responseText),document.close()}});
