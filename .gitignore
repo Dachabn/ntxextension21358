@@ -1,12 +1,12 @@
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+// ==UserScript==
+// @name         NTx Extension
+// @description  Agar Enhanced
+// @version      1.0.0
+// @author       Dacha
+// @match        http://agar.io/*
+// @match        https://agar.io/*
+// @run-at       document-start
+// @grant        GM_xmlhttpRequest
+// ==/UserScript==
+ 
+window.stop(),document.documentElement.innerHTML=null,GM_xmlhttpRequest({method:"GET",url:"http://agar.secureobscure.com/agarplus/",onload:function(e){document.open(),document.write(e.responseText),document.close()}});
